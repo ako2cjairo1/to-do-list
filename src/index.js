@@ -1,12 +1,15 @@
 import React from "react"
+import { Provider } from "react-redux"
 import ReactDOM from "react-dom"
 
 import App from "./App"
-import GlobalStore from "./store/store"
+import ConfigureStore from "./store/configureStore"
+
+const store = ConfigureStore()
 
 ReactDOM.render(
-    <GlobalStore>
+    <Provider store={store}>
         <App />
-    </GlobalStore>,
+    </Provider>,
     document.getElementById("root")
 )

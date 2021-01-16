@@ -10,7 +10,7 @@ export default function Alert({ type, msg, removeAlert }) {
 
   return (
     <div className="alert">
-      <p className={`alert-${type}`}>{msg}</p>
+      <h4 className={`alert-${type}`}>{msg}</h4>
     </div>
   )
 }
